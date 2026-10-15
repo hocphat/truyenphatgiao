@@ -652,7 +652,7 @@
         <h2>Kệ Truyện Tranh Phật Giáo</h2>
         <p>Tuyển tập truyện tranh kinh điển Phật Giáo - Bản Đọc Trực Tuyến Tối Giản</p>
       </div>
-      <span id="shelf-stat" style="color: var(--gold); font-size: 0.88rem; font-weight: 600;">5 Bộ truyện</span>
+      <span id="shelf-stat" style="color: var(--gold); font-size: 0.88rem; font-weight: 600;">14 Bộ truyện</span>
     </div>
 
     <div id="shelf-grid" class="grid"></div>
@@ -755,96 +755,618 @@
 
   <script>
     /* ==========================================================
-       CƠ SỞ DỮ LIỆU TOÀN BỘ CÁC BỘ TRUYỆN TRANH PHẬT GIÁO
-       Cấu trúc thư mục:
-       PDF/
-       ├── Truyện tranh A Di Đà Kinh/
-       ├── Truyện tranh Gương Vãng Sanh/
-       ├── Tô màu hình Phật/
-       ├── Truyện tranh Âm Chất Văn/
-       └── Truyện tranh Du Tịnh Ý/
+       CƠ SỞ DỮ LIỆU TOÀN BỘ 14 BỘ TRUYỆN TRANH PHẬT GIÁO
        ========================================================== */
     const BOOKS_DATA = [
       {
-        id: "adida_kinh",
-        title: "Truyện tranh A Di Đà Kinh",
-        subTitle: "Phật Thuyết A Di Đà Kinh (Amituofojing 网络用)",
-        desc: "Trọn bộ truyện tranh minh họa Phật Thuyết A Di Đà Kinh bằng tranh vẽ màu trang nghiêm, sống động. Đọc trực tiếp từ file PDF gốc với độ nét 100% không vỡ hạt.",
-        cover: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-001.png",
-        totalPages: 190,
-        chapters: [
-          { id: 1, title: "Tập 1", range: "Trang 001 - 020", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-001-020.pdf" },
-          { id: 2, title: "Tập 2", range: "Trang 021 - 040", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-021-040.pdf" },
-          { id: 3, title: "Tập 3", range: "Trang 041 - 060", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-041-060.pdf" },
-          { id: 4, title: "Tập 4", range: "Trang 061 - 080", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-061-080.pdf" },
-          { id: 5, title: "Tập 5", range: "Trang 081 - 100", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-081-100.pdf" },
-          { id: 6, title: "Tập 6", range: "Trang 101 - 120", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-101-120.pdf" },
-          { id: 7, title: "Tập 7", range: "Trang 121 - 140", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-121-140.pdf" },
-          { id: 8, title: "Tập 8", range: "Trang 141 - 160", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-141-160.pdf" },
-          { id: 9, title: "Tập 9", range: "Trang 161 - 180", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-161-180.pdf" },
-          { id: 10, title: "Tập 10", range: "Trang 181 - 190", file: "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-181-190.pdf" }
-        ]
+            "id": "adida_kinh",
+            "title": "Truyện tranh A Di Đà Kinh",
+            "subTitle": "Phật Thuyết A Di Đà Kinh (Amituofojing 网络用)",
+            "desc": "Trọn bộ truyện tranh minh họa Phật Thuyết A Di Đà Kinh bằng tranh vẽ màu trang nghiêm, sống động. Đọc trực tiếp từ file PDF gốc với độ nét 100% không vỡ hạt.",
+            "cover": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-001.png",
+            "totalPages": 190,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 120",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-101-120.pdf"
+                  },
+                  {
+                        "id": 7,
+                        "title": "Tập 7",
+                        "range": "Trang 121 - 140",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-121-140.pdf"
+                  },
+                  {
+                        "id": 8,
+                        "title": "Tập 8",
+                        "range": "Trang 141 - 160",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-141-160.pdf"
+                  },
+                  {
+                        "id": 9,
+                        "title": "Tập 9",
+                        "range": "Trang 161 - 180",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-161-180.pdf"
+                  },
+                  {
+                        "id": 10,
+                        "title": "Tập 10",
+                        "range": "Trang 181 - 190",
+                        "file": "PDF/Truyện tranh A Di Đà Kinh/21.09.03 Truyện tranh A Di Đà Kinh_file để xem_Amituofojing网络用-181-190.pdf"
+                  }
+            ]
       },
       {
-        id: "guong_vang_sanh",
-        title: "Truyện tranh Gương Vãng Sanh",
-        subTitle: "Tuyển tập truyện tranh gương vãng sanh Tây Phương Cực Lạc",
-        desc: "Trọn bộ truyện tranh Gương Vãng Sanh gồm 5 tập minh họa các tấm gương niệm Phật vãng sanh trang nghiêm, thanh tịnh.",
-        cover: "PDF/Truyện tranh Gương Vãng Sanh/0.jpg",
-        totalPages: 95,
-        chapters: [
-          { id: 1, title: "Tập 1", range: "Trang 01 - 20", file: "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-01-20.pdf" },
-          { id: 2, title: "Tập 2", range: "Trang 21 - 40", file: "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-21-40.pdf" },
-          { id: 3, title: "Tập 3", range: "Trang 41 - 60", file: "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-41-60.pdf" },
-          { id: 4, title: "Tập 4", range: "Trang 61 - 80", file: "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-61-80.pdf" },
-          { id: 5, title: "Tập 5", range: "Trang 81 - 95", file: "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-81-95.pdf" }
-        ]
+            "id": "guong_vang_sanh",
+            "title": "Truyện tranh Gương Vãng Sanh",
+            "subTitle": "Tuyển tập truyện tranh gương vãng sanh Tây Phương Cực Lạc",
+            "desc": "Trọn bộ truyện tranh Gương Vãng Sanh gồm 5 tập minh họa các tấm gương niệm Phật vãng sanh trang nghiêm, thanh tịnh.",
+            "cover": "PDF/Truyện tranh Gương Vãng Sanh/0.jpg",
+            "totalPages": 95,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 40",
+                        "file": "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-21-40.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 41 - 60",
+                        "file": "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-41-60.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 61 - 80",
+                        "file": "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-61-80.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 81 - 95",
+                        "file": "PDF/Truyện tranh Gương Vãng Sanh/24.11.03 Truyện tranh Gương Vãng Sanh_file de xem-81-95.pdf"
+                  }
+            ]
       },
       {
-        id: "to_mau_hinh_phat",
-        title: "Tô màu hình Phật",
-        subTitle: "Tập vẽ và tô màu hình ảnh Đức Phật",
-        desc: "Tập tranh vẽ nét trắng đen tô màu hình Phật dành cho Phật tử và các bạn nhỏ gieo duyên lành với Tam Bảo.",
-        cover: "PDF/Tô màu hình Phật/0.jpg",
-        totalPages: 32,
-        chapters: [
-          { id: 1, title: "Tập 1", range: "Trang 01 - 20", file: "PDF/Tô màu hình Phật/23.08.15 Tô màu hình Phật_file để xem-01-20.pdf" },
-          { id: 2, title: "Tập 2", range: "Trang 21 - 32", file: "PDF/Tô màu hình Phật/23.08.15 Tô màu hình Phật_file để xem-21-32.pdf" }
-        ]
+            "id": "to_mau_hinh_phat",
+            "title": "Tô màu hình Phật",
+            "subTitle": "Tập vẽ và tô màu hình ảnh Đức Phật",
+            "desc": "Tập tranh vẽ nét trắng đen tô màu hình Phật dành cho Phật tử và các bạn nhỏ gieo duyên lành với Tam Bảo.",
+            "cover": "PDF/Tô màu hình Phật/0.jpg",
+            "totalPages": 32,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Tô màu hình Phật/23.08.15 Tô màu hình Phật_file để xem-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 32",
+                        "file": "PDF/Tô màu hình Phật/23.08.15 Tô màu hình Phật_file để xem-21-32.pdf"
+                  }
+            ]
       },
       {
-        id: "am_chat_van",
-        title: "Truyện tranh Âm Chất Văn",
-        subTitle: "Văn Xương Đế Quân Âm Chất Văn (文昌帝君阴骘文漫画)",
-        desc: "Trọn bộ truyện tranh khuyên người tích đức hành thiện Văn Xương Đế Quân Âm Chất Văn, gồm 6 tập đầy đủ.",
-        cover: "PDF/Truyện tranh Âm Chất Văn/0.jpg",
-        totalPages: 117,
-        chapters: [
-          { id: 1, title: "Tập 1", range: "Trang 001 - 020", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-001-020.pdf" },
-          { id: 2, title: "Tập 2", range: "Trang 021 - 040", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-021-040.pdf" },
-          { id: 3, title: "Tập 3", range: "Trang 041 - 060", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-041-060.pdf" },
-          { id: 4, title: "Tập 4", range: "Trang 061 - 080", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-061-080.pdf" },
-          { id: 5, title: "Tập 5", range: "Trang 081 - 100", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-081-100.pdf" },
-          { id: 6, title: "Tập 6", range: "Trang 101 - 117", file: "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-101-117.pdf" }
-        ]
+            "id": "am_chat_van",
+            "title": "Truyện tranh Âm Chất Văn",
+            "subTitle": "Văn Xương Đế Quân Âm Chất Văn (文昌帝君阴骘文漫画)",
+            "desc": "Trọn bộ truyện tranh khuyên người tích đức hành thiện Văn Xương Đế Quân Âm Chất Văn, gồm 6 tập đầy đủ.",
+            "cover": "PDF/Truyện tranh Âm Chất Văn/0.jpg",
+            "totalPages": 117,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 117",
+                        "file": "PDF/Truyện tranh Âm Chất Văn/23.04.08 Truyện tranh Âm Chất Văn_file de xem_文昌帝君阴骘文漫画网络用-101-117.pdf"
+                  }
+            ]
       },
       {
-        id: "du_tinh_y",
-        title: "Truyện tranh Du Tịnh Ý",
-        subTitle: "Du Tịnh Ý Công Ngộ Táo Thần Ký (俞淨意公遇灶神記)",
-        desc: "Trọn bộ truyện tranh về câu chuyện cải biến vận mệnh của Du Tịnh Ý Công nhờ sửa đổi tâm niệm và làm lành lánh dữ.",
-        cover: "PDF/Truyện tranh Du Tịnh Ý/0.jpg",
-        totalPages: 107,
-        chapters: [
-          { id: 1, title: "Tập 1", range: "Trang 001 - 020", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-001-020.pdf" },
-          { id: 2, title: "Tập 2", range: "Trang 021 - 040", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-021-040.pdf" },
-          { id: 3, title: "Tập 3", range: "Trang 041 - 060", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-041-060.pdf" },
-          { id: 4, title: "Tập 4", range: "Trang 061 - 080", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-061-080.pdf" },
-          { id: 5, title: "Tập 5", range: "Trang 081 - 100", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-081-100.pdf" },
-          { id: 6, title: "Tập 6", range: "Trang 101 - 107", file: "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-101-107.pdf" }
-        ]
+            "id": "du_tinh_y",
+            "title": "Truyện tranh Du Tịnh Ý",
+            "subTitle": "Du Tịnh Ý Công Ngộ Táo Thần Ký (俞淨意公遇灶神記)",
+            "desc": "Trọn bộ truyện tranh về câu chuyện cải biến vận mệnh của Du Tịnh Ý Công nhờ sửa đổi tâm niệm và làm lành lánh dữ.",
+            "cover": "PDF/Truyện tranh Du Tịnh Ý/0.jpg",
+            "totalPages": 107,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 107",
+                        "file": "PDF/Truyện tranh Du Tịnh Ý/23.03.05 Truyện tranh Du Tịnh Ý_file để xem_俞淨意公遇灶神記_网络用-101-107.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "to_mau_dao_lam_con",
+            "title": "Tô màu-tập viết Đạo Làm Con",
+            "subTitle": "Tập vẽ tô màu và luyện viết Đệ Tử Quy - Đạo Làm Con",
+            "desc": "Bộ sách tô màu kết hợp tập viết rèn luyện đạo đức hiếu thảo, lễ phép của Đạo Làm Con dành cho thiếu nhi.",
+            "cover": "PDF/Tô màu-tập viết Đạo Làm Con/0.jpg",
+            "totalPages": 132,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 120",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-101-120.pdf"
+                  },
+                  {
+                        "id": 7,
+                        "title": "Tập 7",
+                        "range": "Trang 121 - 132",
+                        "file": "PDF/Tô màu-tập viết Đạo Làm Con/23.01.03 Tô màu-tập viết Đạo Làm Con_file de xem-121-132.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "thap_thien_nghiep_dao_kinh",
+            "title": "Truyện tranh Thập Thiện Nghiệp Đạo Kinh",
+            "subTitle": "Phật Thuyết Thập Thiện Nghiệp Đạo Kinh (十善业道经漫画)",
+            "desc": "Trọn bộ truyện tranh giảng giải mười nghiệp thiện của thân, khẩu, ý theo lời Phật dạy trong Thập Thiện Nghiệp Đạo Kinh.",
+            "cover": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/0.jpg",
+            "totalPages": 158,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 120",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-101-120.pdf"
+                  },
+                  {
+                        "id": 7,
+                        "title": "Tập 7",
+                        "range": "Trang 121 - 140",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-121-140.pdf"
+                  },
+                  {
+                        "id": 8,
+                        "title": "Tập 8",
+                        "range": "Trang 141 - 158",
+                        "file": "PDF/Truyện tranh Thập Thiện Nghiệp Đạo Kinh/22.11.11 Truyện tranh Thập Thiện Nghiệp Đạo Kinh_file de xem_十善业道经漫画_网络用-141-158.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "duc_duc_khai_mong",
+            "title": "Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS",
+            "subTitle": "Đức Dục Khải Mông - Ấn Quang Đại Sư (德育啟蒙)",
+            "desc": "Tài liệu giáo dục đạo đức căn bản Đức Dục Khải Mông được Ấn Quang Đại Sư ấn tống, chuyển thể thành tranh truyện sinh động.",
+            "cover": "PDF/Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS/0.jpg",
+            "totalPages": 31,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS/22.11.10 Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS_德育啟蒙-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 31",
+                        "file": "PDF/Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS/22.11.10 Truyện tranh Đức Dục Khải Mông_Ấn Quang ĐS_德育啟蒙-21-31.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "dao_lam_con_ver2022",
+            "title": "Truyện tranh Đạo Làm Con Ver2022",
+            "subTitle": "Đệ Tử Quy - Đạo Làm Con (Phiên bản 2022)",
+            "desc": "Trọn bộ truyện tranh màu hướng dẫn phép tắc làm con hiếu thảo, lễ nghĩa và kính trọng bề trên theo chuẩn mực Đệ Tử Quy.",
+            "cover": "PDF/Truyện tranh Đạo Làm Con Ver2022/0.jpg",
+            "totalPages": 79,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh Đạo Làm Con Ver2022/22.09.27 Truyện tranh Đạo Làm Con Ver2022_file de xem-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 40",
+                        "file": "PDF/Truyện tranh Đạo Làm Con Ver2022/22.09.27 Truyện tranh Đạo Làm Con Ver2022_file de xem-21-40.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 41 - 60",
+                        "file": "PDF/Truyện tranh Đạo Làm Con Ver2022/22.09.27 Truyện tranh Đạo Làm Con Ver2022_file de xem-41-60.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 61 - 79",
+                        "file": "PDF/Truyện tranh Đạo Làm Con Ver2022/22.09.27 Truyện tranh Đạo Làm Con Ver2022_file de xem-61-79.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "nhan_qua_cam_ung",
+            "title": "Truyện tranh Nhân Quả Cảm Ứng",
+            "subTitle": "Nhân Quả Cảm Ứng Thực Lục (因果感应漫画)",
+            "desc": "Tuyển tập các câu chuyện nhân quả báo ứng chân thật, giúp người đọc thấu hiểu lý nhân quả để bỏ ác làm lành.",
+            "cover": "PDF/Truyện tranh Nhân Quả Cảm Ứng/0.jpg",
+            "totalPages": 99,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh Nhân Quả Cảm Ứng/22.08.28 Truyện tranh Nhân Quả Cảm Ứng_file de xem_因果感应漫画_网络用-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 40",
+                        "file": "PDF/Truyện tranh Nhân Quả Cảm Ứng/22.08.28 Truyện tranh Nhân Quả Cảm Ứng_file de xem_因果感应漫画_网络用-21-40.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 41 - 60",
+                        "file": "PDF/Truyện tranh Nhân Quả Cảm Ứng/22.08.28 Truyện tranh Nhân Quả Cảm Ứng_file de xem_因果感应漫画_网络用-41-60.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 61 - 80",
+                        "file": "PDF/Truyện tranh Nhân Quả Cảm Ứng/22.08.28 Truyện tranh Nhân Quả Cảm Ứng_file de xem_因果感应漫画_网络用-61-80.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 81 - 99",
+                        "file": "PDF/Truyện tranh Nhân Quả Cảm Ứng/22.08.28 Truyện tranh Nhân Quả Cảm Ứng_file de xem_因果感应漫画_网络用-81-99.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "48_dai_nguyen",
+            "title": "Truyện tranh 48 Đại Nguyện",
+            "subTitle": "48 Đại Nguyện Của Đức Phật A Di Đà (48Dayuan 网络用)",
+            "desc": "Trọn bộ truyện tranh minh họa chi tiết 48 lời đại nguyện từ bi cứu độ chúng sanh của Đức Phật A Di Đà.",
+            "cover": "PDF/Truyện tranh 48 Đại Nguyện/0.jpg",
+            "totalPages": 135,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 120",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-101-120.pdf"
+                  },
+                  {
+                        "id": 7,
+                        "title": "Tập 7",
+                        "range": "Trang 121 - 135",
+                        "file": "PDF/Truyện tranh 48 Đại Nguyện/22.01.09 Truyện tranh 48 Đại Nguyện_file de xem_48Dayuan网络用-121-135.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "dai_the_chi",
+            "title": "Truyện tranh Đại Thế Chí",
+            "subTitle": "Đại Thế Chí Bồ Tát Niệm Phật Viên Thông Chương (Dashizhi 网络用)",
+            "desc": "Trọn bộ truyện tranh minh họa pháp môn Niệm Phật Viên Thông của ngài Đại Thế Chí Bồ Tát.",
+            "cover": "PDF/Truyện tranh Đại Thế Chí/0.jpg",
+            "totalPages": 41,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh Đại Thế Chí/21.09.22 Truyện tranh Đại Thế Chí_file de xem_Dashizhi网络用-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 40",
+                        "file": "PDF/Truyện tranh Đại Thế Chí/21.09.22 Truyện tranh Đại Thế Chí_file de xem_Dashizhi网络用-21-40.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 41 - 41",
+                        "file": "PDF/Truyện tranh Đại Thế Chí/21.09.22 Truyện tranh Đại Thế Chí_file de xem_Dashizhi网络用-41-41.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "ve_adida_phat",
+            "title": "Truyện tranh về A Di Đà Phật",
+            "subTitle": "Tiểu sử và công hạnh Đức Phật A Di Đà (Amituofo 网络用)",
+            "desc": "Bộ truyện tranh kể về nhân địa tu hành của Pháp Tạng Tỳ Kheo và sự hình thành cõi Tây Phương Cực Lạc của Đức Phật A Di Đà.",
+            "cover": "PDF/Truyện tranh về A Di Đà Phật/0.jpg",
+            "totalPages": 52,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 01 - 20",
+                        "file": "PDF/Truyện tranh về A Di Đà Phật/21.09.06 Truyện tranh về A Di Đà Phật_file de xem_Amituofo网络用-01-20.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 21 - 40",
+                        "file": "PDF/Truyện tranh về A Di Đà Phật/21.09.06 Truyện tranh về A Di Đà Phật_file de xem_Amituofo网络用-21-40.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 41 - 52",
+                        "file": "PDF/Truyện tranh về A Di Đà Phật/21.09.06 Truyện tranh về A Di Đà Phật_file de xem_Amituofo网络用-41-52.pdf"
+                  }
+            ]
+      },
+      {
+            "id": "cam_ung_thien",
+            "title": "Truyện tranh Cảm Ứng Thiên",
+            "subTitle": "Thái Thượng Cảm Ứng Thiên (太上感应篇漫画)",
+            "desc": "Trọn bộ truyện tranh 10 tập giảng giải sâu sắc về lý nhân quả họa phước của Thái Thượng Cảm Ứng Thiên.",
+            "cover": "PDF/Truyện tranh Cảm Ứng Thiên/0.jpg",
+            "totalPages": 195,
+            "chapters": [
+                  {
+                        "id": 1,
+                        "title": "Tập 1",
+                        "range": "Trang 001 - 020",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-001-020.pdf"
+                  },
+                  {
+                        "id": 2,
+                        "title": "Tập 2",
+                        "range": "Trang 021 - 040",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-021-040.pdf"
+                  },
+                  {
+                        "id": 3,
+                        "title": "Tập 3",
+                        "range": "Trang 041 - 060",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-041-060.pdf"
+                  },
+                  {
+                        "id": 4,
+                        "title": "Tập 4",
+                        "range": "Trang 061 - 080",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-061-080.pdf"
+                  },
+                  {
+                        "id": 5,
+                        "title": "Tập 5",
+                        "range": "Trang 081 - 100",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-081-100.pdf"
+                  },
+                  {
+                        "id": 6,
+                        "title": "Tập 6",
+                        "range": "Trang 101 - 120",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-101-120.pdf"
+                  },
+                  {
+                        "id": 7,
+                        "title": "Tập 7",
+                        "range": "Trang 121 - 140",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-121-140.pdf"
+                  },
+                  {
+                        "id": 8,
+                        "title": "Tập 8",
+                        "range": "Trang 141 - 160",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-141-160.pdf"
+                  },
+                  {
+                        "id": 9,
+                        "title": "Tập 9",
+                        "range": "Trang 161 - 180",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-161-180.pdf"
+                  },
+                  {
+                        "id": 10,
+                        "title": "Tập 10",
+                        "range": "Trang 181 - 195",
+                        "file": "PDF/Truyện tranh Cảm Ứng Thiên/22.08.12 Truyện tranh Cảm Ứng Thiên_file để xem_太上感应篇漫画_网络用-181-195.pdf"
+                  }
+            ]
       }
-    ];
+];
 
     let selectedBook = BOOKS_DATA[0];
     let currentChapIndex = 0;
